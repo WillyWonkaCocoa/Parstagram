@@ -66,8 +66,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="passwordField" destination="Mt4-u0-2IY" id="7YE-qs-jVG"/>
-                        <outlet property="usernameField" destination="Mt4-u0-2IY" id="Qcp-qU-Yzl"/>
+                        <outlet property="passwordField" destination="Mt4-u0-2IY" id="Asg-TW-aek"/>
+                        <outlet property="usernameField" destination="gxz-Wk-fKL" id="PIe-pJ-BYi"/>
                         <segue destination="wRx-LZ-iFL" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="fk8-rM-q9g"/>
                     </connections>
                 </viewController>
