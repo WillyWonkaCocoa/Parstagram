@@ -82,6 +82,55 @@
                     <view key="view" contentMode="scaleToFill" id="Y0a-E0-6PE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" estimatedRowHeight="350" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Q8-Ld-CnW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="450" id="IVM-WE-ABU" customClass="PostCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="450"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IVM-WE-ABU" id="bMS-hg-4KM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yu1-K4-c7Q">
+                                                    <rect key="frame" x="8" y="8" width="0.0" height="371.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taj-gX-cc2">
+                                                    <rect key="frame" x="23" y="387.5" width="48" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG2-N8-wPu">
+                                                    <rect key="frame" x="79" y="387.5" width="75" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="taj-gX-cc2" secondAttribute="bottom" constant="31" id="0L7-IV-drn"/>
+                                                <constraint firstItem="taj-gX-cc2" firstAttribute="top" secondItem="Yu1-K4-c7Q" secondAttribute="bottom" constant="8" id="9NS-C7-uPl"/>
+                                                <constraint firstItem="Yu1-K4-c7Q" firstAttribute="top" secondItem="bMS-hg-4KM" secondAttribute="top" constant="8" id="Gfb-Bm-S9r"/>
+                                                <constraint firstAttribute="trailing" secondItem="Yu1-K4-c7Q" secondAttribute="trailing" constant="8" id="HsO-J0-7AL"/>
+                                                <constraint firstItem="taj-gX-cc2" firstAttribute="leading" secondItem="bMS-hg-4KM" secondAttribute="leadingMargin" constant="8" id="JP4-zt-HAc"/>
+                                                <constraint firstItem="taj-gX-cc2" firstAttribute="baseline" secondItem="YG2-N8-wPu" secondAttribute="baseline" id="MwX-Et-t9z"/>
+                                                <constraint firstItem="Yu1-K4-c7Q" firstAttribute="leading" secondItem="bMS-hg-4KM" secondAttribute="leading" constant="8" id="hBu-BA-t7H"/>
+                                                <constraint firstItem="YG2-N8-wPu" firstAttribute="leading" secondItem="taj-gX-cc2" secondAttribute="trailing" constant="8" id="qqr-s6-DKY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="YG2-N8-wPu" id="ieC-Lw-Y6c"/>
+                                            <outlet property="photoView" destination="Yu1-K4-c7Q" id="oLH-NR-cZj"/>
+                                            <outlet property="usernameLabel" destination="taj-gX-cc2" id="7Xn-WP-t3G"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pOU-w2-lvO"/>
                     </view>
@@ -92,10 +141,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="6Q8-Ld-CnW" id="zP0-id-lkK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ir-Rr-LRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1799.2" y="126.38680659670166"/>
+            <point key="canvasLocation" x="1621.5999999999999" y="125.4872563718141"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="pog-Nx-9p0">
