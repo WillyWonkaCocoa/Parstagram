@@ -128,7 +128,7 @@
                                             <outlet property="usernameLabel" destination="taj-gX-cc2" id="7Xn-WP-t3G"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="30" id="DhR-sb-8u3" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="30" id="DhR-sb-8u3" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="453" width="375" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DhR-sb-8u3" id="5Ie-Pz-49y">
@@ -162,6 +162,29 @@
                                             <outlet property="commentLabel" destination="RHt-B9-OOc" id="oqW-qh-8kX"/>
                                             <outlet property="nameLabel" destination="gfQ-jd-0B7" id="bJx-kg-G1H"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddCommentCell" id="peE-jF-k0y">
+                                        <rect key="frame" x="0.0" y="483" width="375" height="350"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="peE-jF-k0y" id="HIr-Wc-7PS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add a comment ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-jc-YMn">
+                                                    <rect key="frame" x="16" y="8" width="187" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pa2-jc-YMn" firstAttribute="leading" secondItem="HIr-Wc-7PS" secondAttribute="leading" constant="16" id="HUW-a9-7bW"/>
+                                                <constraint firstAttribute="trailing" secondItem="pa2-jc-YMn" secondAttribute="trailing" constant="8" id="Rba-xs-NsF"/>
+                                                <constraint firstAttribute="bottom" secondItem="pa2-jc-YMn" secondAttribute="bottom" constant="8" id="d0O-Vj-U8W"/>
+                                                <constraint firstItem="pa2-jc-YMn" firstAttribute="top" secondItem="HIr-Wc-7PS" secondAttribute="top" constant="8" id="nw6-bs-YKO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
