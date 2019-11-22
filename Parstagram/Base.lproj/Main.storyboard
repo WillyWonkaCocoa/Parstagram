@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +135,11 @@
                         <viewLayoutGuide key="safeArea" id="pOU-w2-lvO"/>
                     </view>
                     <navigationItem key="navigationItem" id="LaC-ot-8S8">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="4Sy-QO-USC">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="LQY-PO-aTx" id="jSj-NJ-UVU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" image="camera" catalog="system" id="LmD-Gd-1uo">
                             <connections>
                                 <segue destination="y5t-3W-cFr" kind="presentation" id="1jP-Gy-uTt"/>
@@ -195,12 +200,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2669.5999999999999" y="125.4872563718141"/>
+            <point key="canvasLocation" x="2422" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sVd-oL-CPG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wRx-LZ-iFL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="wRx-LZ-iFL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BBn-dk-Jkb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
